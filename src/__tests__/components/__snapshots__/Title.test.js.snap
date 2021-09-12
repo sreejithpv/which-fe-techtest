@@ -3,6 +3,7 @@
 exports[`Title Component Render snapshot the component 1`] = `
 <h1
   data-testid="title"
+  tabIndex="0"
 >
   Snapshot title
 </h1>

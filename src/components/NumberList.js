@@ -20,6 +20,11 @@ function NumberList({ maxNumberLimit }) {
     };
 
   const onClick = useCallback((selectedNumber) => selectNumber(selectedNumber),[]);
+  const onKeyPress = useCallback((selectedNumber, e) => { 
+    if(e.keyCode === 13) { 
+      selectNumber(selectedNumber) 
+    }
+    },[]);
 
   return (
     <ul className="grid-container">
@@ -27,6 +32,7 @@ function NumberList({ maxNumberLimit }) {
         <NumberBox 
           key={numberItem.value}
           onClick={() => !numberItem.isSelected ? onClick(numberItem.value): false}
+          onKeyPress={(e) => !numberItem.isSelected ? onKeyPress(numberItem.value, e): false}
           value={numberItem.value}
           isSelected={numberItem.isSelected}
           isMultipliable={numberItem.isMultipliable}
