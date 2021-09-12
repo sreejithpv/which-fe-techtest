@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageDescription Component Render snapshot the component 1`] = `
+<p
+  data-testid="page-description"
+>
+  Snapshot PageDescription
+</p>
+`;

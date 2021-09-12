@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title Component Render snapshot the component 1`] = `
+<h1
+  data-testid="title"
+>
+  Snapshot title
+</h1>
+`;
