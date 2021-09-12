@@ -4,9 +4,8 @@ const arrayItemObject = {
     value: 0,
     isSelected: false,
 };
-export let selectedNumberBox = null;
 
-const getInitialNumbersArray = (maxNumberLimit=10) => {
+export const getInitialNumbersArray = (maxNumberLimit) => {
     const initialNumArray = [];
     for(let i =1; i <=maxNumberLimit; i++) {
         (i % 2 === 0) && initialNumArray.push({
@@ -22,7 +21,6 @@ export const getNumberList = ({maxNumberLimit, numberList, selectedNumber=null})
     let updatedNumberList = numberList || getInitialNumbersArray(maxNumberLimit);
     updatedNumberList.forEach((numberObj, index) => {
         if(selectedNumber === numberObj.value) {
-            selectedNumberBox = numberObj.value;
             updatedNumberList[index] = {
                 ...arrayItemObject,
                 value: numberObj.value,
