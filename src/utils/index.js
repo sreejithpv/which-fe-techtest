@@ -8,7 +8,7 @@ const arrayItemObject = {
 export const getInitialNumbersArray = (maxNumberLimit) => {
     const initialNumArray = [];
     for(let i =1; i <=maxNumberLimit; i++) {
-        (i % 2 === 0) && initialNumArray.push({
+        initialNumArray.push({
             ...arrayItemObject,
             value: i,
         });

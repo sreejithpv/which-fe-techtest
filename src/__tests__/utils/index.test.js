@@ -11,7 +11,7 @@ describe('Utils getNumberList', () => {
   });
   test("returns with selected value updated in array", () => {
     const numList = getNumberList({ maxNumberLimit: 4, selectedNumber: 2 });
-    expect(numList[0].isSelected).toBe(true);
+    expect(numList[1].isSelected).toBe(true);
   });
   test("returns with isMultipliable", () => {
     const numList = getNumberList({ maxNumberLimit: 4, selectedNumber: 4 });
