@@ -20,8 +20,8 @@ function NumberList({ maxNumberLimit }) {
     };
 
   const onClick = useCallback((selectedNumber) => selectNumber(selectedNumber),[]);
-  const onKeyPress = useCallback((selectedNumber, e) => { 
-    if(e.keyCode === 13) { 
+  const onKeyPress = useCallback((selectedNumber, e) => {
+    if(e.key === 'Enter' || e.keyCode === 13) {
       selectNumber(selectedNumber) 
     }
     },[]);

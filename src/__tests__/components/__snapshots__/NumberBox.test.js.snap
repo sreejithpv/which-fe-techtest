@@ -4,6 +4,7 @@ exports[`NumberBox Component should render active class name when isMultipliable
 <li
   className="grid-item active "
   onClick={[MockFunction]}
+  onKeyDown={[MockFunction]}
   role="button"
   tabIndex="0"
 >
@@ -15,6 +16,7 @@ exports[`NumberBox Component should render selected class name when isSelected 1
 <li
   className="grid-item  selected"
   onClick={[MockFunction]}
+  onKeyDown={[MockFunction]}
   role="button"
   tabIndex="0"
 >
@@ -26,6 +28,7 @@ exports[`NumberBox Component should render snapshot with default props 1`] = `
 <li
   className="grid-item  "
   onClick={[MockFunction]}
+  onKeyDown={[MockFunction]}
   role="button"
   tabIndex="0"
 >

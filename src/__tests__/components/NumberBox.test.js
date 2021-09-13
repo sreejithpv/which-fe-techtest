@@ -3,12 +3,15 @@ import TestRenderer from 'react-test-renderer';
 import NumberBox from '../../components/NumberBox';
 
 const onClick=jest.fn();
+const onKeyPress = jest.fn();
 const baseProps = {
   value: 10,
   onClick,
+  onKeyPress,
   isSelected: false,
   isMultipliable: false,
-}
+};
+
 const renderFun = ( props = baseProps ) => TestRenderer.create(<NumberBox {...props} />);
 
 describe('NumberBox Component', () => {
