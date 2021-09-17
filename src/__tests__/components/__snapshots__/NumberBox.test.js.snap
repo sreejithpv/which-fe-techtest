@@ -2,6 +2,7 @@
 
 exports[`NumberBox Component should render active class name when isMultipliable 1`] = `
 <li
+  aria-selected={false}
   className="grid-item active "
   onClick={[MockFunction]}
   onKeyDown={[MockFunction]}
@@ -14,6 +15,7 @@ exports[`NumberBox Component should render active class name when isMultipliable
 
 exports[`NumberBox Component should render selected class name when isSelected 1`] = `
 <li
+  aria-selected={true}
   className="grid-item  selected"
   onClick={[MockFunction]}
   onKeyDown={[MockFunction]}
@@ -26,6 +28,7 @@ exports[`NumberBox Component should render selected class name when isSelected 1
 
 exports[`NumberBox Component should render snapshot with default props 1`] = `
 <li
+  aria-selected={false}
   className="grid-item  "
   onClick={[MockFunction]}
   onKeyDown={[MockFunction]}

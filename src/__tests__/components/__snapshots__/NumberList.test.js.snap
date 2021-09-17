@@ -1,44 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NumberList Component should render snapshot with default props 1`] = `
-<ul
+<ol
   className="grid-container"
->
-  <li
-    className="grid-item  "
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="button"
-    tabIndex="0"
-  >
-    1
-  </li>
-  <li
-    className="grid-item  "
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="button"
-    tabIndex="0"
-  >
-    2
-  </li>
-  <li
-    className="grid-item  "
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="button"
-    tabIndex="0"
-  >
-    3
-  </li>
-  <li
-    className="grid-item  "
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="button"
-    tabIndex="0"
-  >
-    4
-  </li>
-</ul>
+/>
 `;

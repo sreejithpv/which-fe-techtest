@@ -10,6 +10,7 @@ function NumberBox({ value, onClick, onKeyPress, isSelected, isMultipliable }) {
       role="button" 
       onClick={onClick}
       onKeyDown={onKeyPress}
+      aria-selected={isSelected}
     >
       {value}
     </li>

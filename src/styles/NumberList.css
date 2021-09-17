@@ -18,11 +18,15 @@
     align-items: center;
   }
   .grid-item.active {
-    background-color: rgba(180, 243, 185, 0.8);
+    border:0;
+    outline: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: rgba(87, 245, 100, 0.8);
     animation:blink 1.5s;
   }
 
   .grid-item.selected {
+    border:0;
+    outline: 1px solid rgba(0, 0, 0, 0.8);
     background-color: rgba(14, 189, 212, 0.8);
     cursor: auto;
   }

@@ -1,44 +1,41 @@
 
-import React, { useState, useCallback} from 'react';
+import React, { useState, useCallback, useEffect} from 'react';
 import PropTypes from 'prop-types';
-
-import { getNumberList } from '../utils';
+import PageDescription from './PageDescription';
+import { getInitialNumbersArray } from '../utils';
 import NumberBox from './NumberBox';
 
 import '../styles/NumberList.css';
 
 function NumberList({ maxNumberLimit }) {
-  const [numberList, setNumberList] = useState(getNumberList({maxNumberLimit}));
+  const [numberList, setNumberList] = useState([]);
+  const [selectedNumer, selectNumber] = useState(null);
+  
+  useEffect(() => setNumberList(getInitialNumbersArray(maxNumberLimit)), [maxNumberLimit]);
 
-  const selectNumber = (selectedNumber) => {
-    const numList =getNumberList({
-      maxNumberLimit,
-      selectedNumber,
-      numberList,
-    })
-    setNumberList([...numList]);
-    };
-
-  const onClick = useCallback((selectedNumber) => selectNumber(selectedNumber),[]);
-  const onKeyPress = useCallback((selectedNumber, e) => {
+  const onClick = useCallback((selectedNum) => selectNumber(selectedNum),[]);
+  const onKeyPress = useCallback((selectedNum, e) => {
     if(e.key === 'Enter' || e.keyCode === 13) {
-      selectNumber(selectedNumber) 
+      selectNumber(selectedNum) 
     }
     },[]);
 
   return (
-    <ul className="grid-container">
-      {numberList.map(numberItem => (
+    <>
+    {selectedNumer &&<PageDescription>You have selected {selectedNumer}. Multiples of {selectedNumer}are highlighed in green color.</PageDescription> }
+    <ol className="grid-container">
+      {numberList.length > 0 && numberList.map(numberItem => (
         <NumberBox 
-          key={numberItem.value}
-          onClick={() => !numberItem.isSelected ? onClick(numberItem.value): false}
-          onKeyPress={(e) => !numberItem.isSelected ? onKeyPress(numberItem.value, e): false}
-          value={numberItem.value}
-          isSelected={numberItem.isSelected}
-          isMultipliable={numberItem.isMultipliable}
+          key={numberItem}
+          onClick={() => onClick(numberItem)}
+          onKeyPress={(e) => onKeyPress(numberItem, e)}
+          value={numberItem}
+          isSelected={numberItem === selectedNumer}
+          isMultipliable={selectedNumer ? selectedNumer % numberItem === 0 : false}
         />
       ))}
-    </ul>
+    </ol>
+    </>
   );
 }
 
