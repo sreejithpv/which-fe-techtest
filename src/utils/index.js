@@ -19,7 +19,7 @@ export const getInitialNumbersArray = (maxNumberLimit) => {
 
 export const getNumberList = ({maxNumberLimit, numberList, selectedNumber=null}) => {
     let updatedNumberList = numberList || getInitialNumbersArray(maxNumberLimit);
-    updatedNumberList.forEach((numberObj, index) => {
+    numberList && updatedNumberList.forEach((numberObj, index) => {
         if(selectedNumber === numberObj.value) {
             updatedNumberList[index] = {
                 ...arrayItemObject,

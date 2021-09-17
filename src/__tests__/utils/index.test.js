@@ -10,11 +10,11 @@ describe('Utils getNumberList', () => {
     expect(numList).toEqual(numberList)
   });
   test("returns with selected value updated in array", () => {
-    const numList = getNumberList({ maxNumberLimit: 4, selectedNumber: 2 });
+    const numList = getNumberList({ maxNumberLimit: 4, numberList, selectedNumber: 2 });
     expect(numList[1].isSelected).toBe(true);
   });
   test("returns with isMultipliable", () => {
-    const numList = getNumberList({ maxNumberLimit: 4, selectedNumber: 4 });
+    const numList = getNumberList({ maxNumberLimit: 4, numberList, selectedNumber: 4 });
     expect(numList[0].isMultipliable).toBe(true);
   });
   test("should not get data from getInitialNumbersArray when there is numberList", () => {
